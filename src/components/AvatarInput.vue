@@ -2,12 +2,13 @@
     <div>
         <input type="file" accept="image/*" class="hidden" ref="fileInput" @change="onFileChange">
         <div class="relative inline-block">
-            <img :src="src" alt="cat image" class="h-36 w-36 rounded-md object-cover">
+            <img :src="src" alt="pet image" class="h-48 w-48 rounded-md object-cover">
             <div class="absolute top-0 h-full w-full bg-black rounded-md bg-opacity-25 flex items-center justify-center">
-                <button @click="browse()"
+                <button type="button" @click="browse()"
                     class="rounded-md hover:bg-white hover:bg-opacity-25 p-2 focus:outline-none text-white transition duration-200 font-semibold text-lg">
                     <span>Browse</span>
                 </button>
+                <!-- remove button -->
             </div>
         </div>
     </div>
@@ -36,6 +37,7 @@ export default {
                 src.value = e.target?.result
             }
         }
+
         return {
             src,
             fileInput,
