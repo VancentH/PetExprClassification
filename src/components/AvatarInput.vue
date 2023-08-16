@@ -6,9 +6,8 @@
             <div class="absolute top-0 h-full w-full bg-black rounded-md bg-opacity-25 flex items-center justify-center">
                 <button type="button" @click="browse()"
                     class="rounded-md hover:bg-white hover:bg-opacity-25 p-2 focus:outline-none text-white transition duration-200 font-semibold text-lg">
-                    <span>Browse</span>
+                    <span>選擇圖片</span>
                 </button>
-                <!-- remove button -->
             </div>
         </div>
     </div>
@@ -47,3 +46,5 @@ export default {
     },
 };
 </script>
+
+<style></style>

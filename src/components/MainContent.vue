@@ -3,37 +3,37 @@
         <div class="flex flex-col sm:flex-row mr-auto max-w-7xl py-6 sm:px-6 lg:px-8">
             <form id="upload-from" class="p-5 flex flex-col" @submit.prevent="submit">
                 <avatar-input v-model="form.avatar" :default-src="form.src" @input="onFileUploaded"></avatar-input>
-                <input type="submit" value="submit"
+                <input type="submit" value="開始分析"
                     class="border-2 border-red-500 bg-white text-red-500 rounded-md w-48 px-4 py-2  mt-3 transition duration-500 ease select-none hover:bg-red-600 hover:text-white focus:outline-none focus:shadow-outline cursor-pointer">
             </form>
             <div class="p-5 w-96">
                 <table class="table w-full bg-white">
                     <thead>
                         <tr>
-                            <th class="font-semibold border px-4 py-2 text-gray-900">Class</th>
-                            <th class="font-semibold border px-4 py-2 text-gray-900">Score</th>
+                            <th class="font-semibold border px-4 py-2 text-gray-900">感覺</th>
+                            <th class="font-semibold border px-4 py-2 text-gray-900">分數</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="border px-4 py-2">Angry</td>
+                            <td class="border px-4 py-2">生氣 (Angry)</td>
                             <td class="border px-4 py-2">{{ scores.angry }}</td>
                         </tr>
                         <tr>
-                            <td class="border px-4 py-2">Sad</td>
+                            <td class="border px-4 py-2">難過 (Sad)</td>
                             <td class="border px-4 py-2">{{ scores.sad }}</td>
                         </tr>
                         <tr>
-                            <td class="border px-4 py-2">Happy</td>
+                            <td class="border px-4 py-2">開心 (Happy)</td>
                             <td class="border px-4 py-2">{{ scores.happy }}</td>
                         </tr>
                         <tr>
-                            <td class="border px-4 py-2">Other</td>
+                            <td class="border px-4 py-2">其他 (Other)</td>
                             <td class="border px-4 py-2">{{ scores.other }}</td>
                         </tr>
                         <tr>
                             <th class="font-semibold border px-4 py-2 text-gray-900 text-left" colSpan="2">
-                                <span class="font-semibold">Scored Label:</span>&nbsp;
+                                <span class="font-semibold">目前可能情緒：</span>&nbsp;
                                 <span>{{ scores.label }}</span>
                             </th>
                         </tr>
